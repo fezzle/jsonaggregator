@@ -47,7 +47,7 @@ struct HashPolicy
     typedef ska::power_of_two_hash_policy hash_policy;
 };
 
-typedef ska::flat_hash_map<uint64_t v, const char *s, HashPolicy> HashMap;
+typedef ska::flat_hash_map<uint64_t, const char *, HashPolicy, std::equal_to<uint64_t>> StringMap;
 
 
 /**

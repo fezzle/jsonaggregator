@@ -12,7 +12,7 @@
 #include <string>
 #include <string.h>
 
-#include "xxhash.h"
+#include "xxHash/xxhash.h"
 #include "sparsehash/dense_hash_map"
 
 #include "defines.h"

@@ -16,7 +16,7 @@
 #include <utility>
 
 #include "defines.h"
-#include "xxhash.h"
+#include "xxHash/xxhash.h"
 
 #include "memorymap.hpp"
 #include "texthandling.hpp"

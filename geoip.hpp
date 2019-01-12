@@ -18,8 +18,7 @@
 #include <inttypes.h>
 #include <sys/errno.h>
 
-#include "xxhash.h"
-#include "sparsehash/dense_hash_map"
+#include "xxHash/xxhash.h"
 
 #include "texthandling.hpp"
 #include "defines.h"
@@ -31,8 +30,6 @@
 using namespace std;
 
 namespace geoip {
-    using google::dense_hash_map;
-
     typedef unsigned long long placehash_t;
         
     class Place {
@@ -63,10 +60,11 @@ namespace geoip {
         }
     };
     
-    
+    typedef ska::flat_hash_map<placehash_t, Place*> GeoIPMap;
+
     class GeoIPDatabase {
     private:
-        dense_hash_map<placehash_t, Place*> places_by_hash;
+        GeoIPMap places_by_hash;
         vector<GeoIP> geoips;
         GeoIPDatabase();
         

@@ -17,7 +17,7 @@
 #include <boost/log/trivial.hpp>
 
 #include "defines.h"
-#include "xxhash.h"
+#include "xxHash/xxhash.h"
 
 /* 16 megabyte block size */
 #define BLOCK_SIZE (1<<24)
@@ -163,7 +163,7 @@ public:
         return key;
     }
     
-    char *get(hash_key key) {
+    const char *get(hash_key key) {
         auto itr = stringmap.find(key);
         if (itr == stringmap.end()) {
             return nullptr;

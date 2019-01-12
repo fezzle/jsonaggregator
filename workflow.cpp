@@ -35,8 +35,7 @@
 #include <boost/log/utility/setup/console.hpp>
 
 
-#include "xxhash.h"
-#include "sparsehash/dense_hash_map"
+#include "xxHash/xxhash.h"
 #include "defines.h"
 
 #include "memorymanager.hpp"

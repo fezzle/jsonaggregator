@@ -22,7 +22,7 @@
 
 #include "defines.h"
 #include "flat_hash_map.hpp"
-#include "xxhash.h"
+#include "xxHash/xxhash.h"
 #include "ua_resolver.hpp"
 #include "geoip.hpp"
 #include "texthandling.hpp"
